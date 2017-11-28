@@ -1,0 +1,12 @@
+body {
+    background: #04313a;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 30px;
+}
+
+#hero-text {
+    color: #ffffff;
+    font-size: 32px;
+}
