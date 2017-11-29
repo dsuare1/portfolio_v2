@@ -22,6 +22,7 @@ module.exports = {
   "rules": {
     "comma-dangle": ["error", "only-multiline"],
     "no-console": 0,
+    "space-before-function-paren": 0,
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
   },
 };

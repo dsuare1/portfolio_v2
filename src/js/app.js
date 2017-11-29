@@ -1,18 +1,40 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { render } from 'react-dom';
 
 import '../css/style.css';
-import profilePic from '../assets/profile_pic.png';
+import profilePic from '../assets/profile_pic_round.png';
 
-export default class Hello extends Component {
-  render() {
-    return (
-      <div>
-        <h1 id="hero-text">Derrick Suarez</h1>
-        <img src={profilePic} alt="Profile Pic" />
-      </div>
-    );
-  }
+function ProfilePic() {
+  return (
+    <img src={profilePic} alt="Profile Pic" />
+  );
 }
 
-render(<Hello />, document.getElementById('app'));
+function Horizon() {
+  return (
+    <div id="horizon-container">
+      <Circle />
+      <Circle />
+      <Circle />
+      <Circle />
+    </div>
+  );
+}
+
+function Circle() {
+  return (
+    <div id="circle" />
+  );
+}
+
+function App() {
+  return (
+    <div>
+      <h1 id="hero-text">Derrick Suarez</h1>
+      <ProfilePic />
+      <Horizon />
+    </div>
+  );
+}
+
+render(<App />, document.getElementById('root'));
