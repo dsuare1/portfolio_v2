@@ -1,14 +1,38 @@
 body {
-    background: #04313a;
+    background: #0D47A1;
     font-family: 'Quicksand', Arial, sans-serif;
     font-size: 16px;
     margin: 0;
-    padding: 30px;
+    height: 100vh;
 }
 
-#hero-text {
+#root {
+    height: 100vh;
+}
+
+#app {
+    height: 100vh;
+}
+
+.callout-card-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.name-card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-text {
     color: #ffffff;
-    font-size: 32px;
+    margin: .5em;
+}
+
+#profile-pic {
+    margin: 2em;
 }
 
 #horizon-container {
@@ -16,6 +40,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    margin-top: 25%;
 }
 
 #circle {
