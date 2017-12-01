@@ -1,0 +1,28 @@
+body {
+    background: #04313a;
+    font-family: 'Quicksand', Arial, sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 30px;
+}
+
+#hero-text {
+    color: #ffffff;
+    font-size: 32px;
+}
+
+#horizon-container {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#circle {
+    background-color: #ffffff;
+    border: 3px solid yellow;
+    border-radius: 50%;
+    height: 20px;
+    margin: 5px;
+    width: 20px;
+}
