@@ -14,6 +14,13 @@ body {
     height: 100vh;
 }
 
+#copy-container {
+    color: #ffffff;
+    font-size: 18px;
+    height: 50vh;
+    padding: 0 10em;
+}
+
 .callout-card-container {
     display: flex;
     flex-direction: row;
@@ -35,12 +42,16 @@ body {
     margin: 2em;
 }
 
+#person-container {
+    padding: 2em;
+    text-align: center;
+}
+
 #horizon-container {
     align-items: center;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin-top: 25%;
 }
 
 #circle {

@@ -24,5 +24,6 @@ module.exports = {
     "no-console": 0,
     "space-before-function-paren": 0,
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "max-len": [0, 256, { "ignoreComments": true }]
   },
 };
