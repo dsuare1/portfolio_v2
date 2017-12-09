@@ -8,7 +8,7 @@ class Circle extends Component {
   render() {
     console.log(`Props from inside Circle component: ${JSON.stringify(this.props, null, 2)}`);
     return (
-      <div id="circle"/>
+      <div id="circle" />
     );
   }
 }
