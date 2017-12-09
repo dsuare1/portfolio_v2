@@ -1,5 +1,6 @@
 body {
-    background: #0D47A1;
+    /*background: #0D47A1;*/
+    background: #01182c;
     font-family: 'Quicksand', Arial, sans-serif;
     font-size: 16px;
     margin: 0;
@@ -12,6 +13,13 @@ body {
 
 #app {
     height: 100vh;
+}
+
+#copy-container {
+    color: #ffffff;
+    font-size: 18px;
+    height: 50vh;
+    padding: 0 10em;
 }
 
 .callout-card-container {
@@ -35,19 +43,29 @@ body {
     margin: 2em;
 }
 
+#person-container {
+    padding: 0 2em;
+    text-align: center;
+}
+
 #horizon-container {
     align-items: center;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin-top: 25%;
 }
 
 #circle {
     background-color: #ffffff;
-    border: 3px solid yellow;
     border-radius: 50%;
-    height: 20px;
+    box-shadow: 0 0 15px #ffffff;
+    height: 35px;
     margin: 5px;
-    width: 20px;
+    transition: all 0.2s ease-in-out;
+    width: 35px;
+}
+
+#circle:hover {
+    background-color: #e67e22;
+    box-shadow: 0 0 30px #e67e22;
 }

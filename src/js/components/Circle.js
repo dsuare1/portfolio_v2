@@ -3,14 +3,12 @@ import React, { Component } from 'react';
 class Circle extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      id: 'circle',
-    };
   }
 
   render() {
+    console.log(`Props from inside Circle component: ${JSON.stringify(this.props, null, 2)}`);
     return (
-      <div id={this.state.id} />
+      <div id="circle"/>
     );
   }
 }
