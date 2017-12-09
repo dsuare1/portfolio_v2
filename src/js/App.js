@@ -3,6 +3,7 @@ import { render } from 'react-dom';
 
 import CalloutCard from './components/CalloutCard';
 import Horizon from './components/Horizon';
+import Copy from './components/Copy';
 
 import '../css/style.css';
 
@@ -18,6 +19,7 @@ class App extends Component {
     return (
       <div id={this.state.id}>
         <CalloutCard />
+        <Copy />
         <Horizon />
       </div>
     );
