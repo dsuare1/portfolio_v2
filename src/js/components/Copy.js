@@ -1,17 +1,17 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-import Person from './Person';
-// import Developer from './Developer';
-// import Technologies from './Technologies';
+class Copy extends Component {
+  constructor(props) {
+    super(props);
+  }
 
-function Copy() {
-  return (
-    <div id="copy-container">
-      <Person />
-      {/*<Developer />*/}
-      {/*<Technologies />*/}
-    </div>
-  );
+  render() {
+    return (
+      <div id="copy-container">
+        <p>{this.props.value}</p>
+      </div>
+    );
+  }
 }
 
 export default Copy;
