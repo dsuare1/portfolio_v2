@@ -10,9 +10,7 @@ class Circle extends Component {
       <div
         id={this.props.id}
         className="circle"
-        onMouseOver={(e) => {
-        this.props.onMouseOver(e);
-      }}
+        onMouseOver={e => this.props.onMouseOver(e)}
       />
     );
   }
