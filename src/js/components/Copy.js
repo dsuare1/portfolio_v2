@@ -7,9 +7,7 @@ class Copy extends Component {
 
   render() {
     return (
-      <div id="copy-container">
-        <p>{this.props.value}</p>
-      </div>
+      <div id="copy-container">{this.props.value}</div>
     );
   }
 }

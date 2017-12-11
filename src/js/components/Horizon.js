@@ -8,13 +8,24 @@ class Horizon extends Component {
   }
 
   render() {
-    console.log(`Props from inside Horizon component: ${JSON.stringify(this.props, null, 2)}`);
     return (
       <div id="horizon-container">
-        <Circle onMouseOver={this.props.onMouseOver } />
-        <Circle onMouseOver={this.props.onMouseOver } />
-        <Circle onMouseOver={this.props.onMouseOver } />
-        <Circle onMouseOver={this.props.onMouseOver } />
+        <div className="section">
+          <h3>The Person</h3>
+          <Circle id="person" onMouseOver={e => this.props.onMouseOver(e)} />
+        </div>
+        <div className="section">
+          <h3>The Developer</h3>
+          <Circle id="developer" onMouseOver={e => this.props.onMouseOver(e)} />
+        </div>
+        <div className="section">
+          <h3>Technologies I&apos;ve Used</h3>
+          <Circle id="technologies" onMouseOver={e => this.props.onMouseOver(e)} />
+        </div>
+        <div className="section">
+          <h3>Portfolio</h3>
+          <Circle id="portfolio" onMouseOver={e => this.props.onMouseOver(e)} />
+        </div>
       </div>
     );
   }

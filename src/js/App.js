@@ -17,29 +17,48 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      text: text.person,
+      copy: text.person,
     };
+    this.handleMouseOver = this.handleMouseOver.bind(this);
   }
 
-  handleMouseOver(e) { // eslint-disable-line
-    console.log(this.e);
-    console.log('foo');
-    // console.log(e.target);
+  handleMouseOver(e) {
+    console.log('fucking function was called!');
+    console.log(e.target.id);
+    let desiredCopy;
+
+    switch (e.target.id) {
+      case 'person':
+        desiredCopy = text.person;
+        break;
+
+      case 'developer':
+        desiredCopy = text.developer;
+        break;
+
+      case 'technologies':
+        desiredCopy = 'tech';
+        break;
+
+      default:
+        // Do nothing
+    }
     this.setState({
-      text: text.developer,
+      copy: desiredCopy,
     });
   }
 
   render() {
-    console.log(`handleMouseOver function in App component: ${this.handleMouseOver}`);
     return (
       <div id="app">
         <CalloutCard />
-        <Copy value={this.state.text} />
-        <Horizon onHover={this.handleMouseOver} />
+        <Copy value={this.state.copy} />
+        <Horizon onMouseOver={e => this.handleMouseOver(e)} />
       </div>
     );
   }
 }
+
+export default App;
 
 render(<App />, document.getElementById('react-root'));
