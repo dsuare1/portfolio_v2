@@ -1,0 +1,103 @@
+body {
+    /*background: #0D47A1;*/
+    background: #01182c;
+    color: #ffffff;
+    font-family: 'Quicksand', Arial, sans-serif;
+    font-size: 16px;
+    height: 100vh;
+    margin: 0;
+}
+
+#root {
+    height: 100vh;
+}
+
+#app {
+    height: 100vh;
+}
+
+.badge-container {
+    background-color: #e67e22;
+    display: flex;
+    flex-direction: row;
+    height: 25vh;
+    justify-content: space-evenly;
+}
+
+.badge-copy-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+}
+
+#badge-name {
+    text-shadow: 0 0 10px #01182c;
+    font-size: 32px;
+    margin-top: 15%;
+}
+
+#badge-email {
+    text-shadow: 0 0 10px #01182c;
+    font-size: 26px;
+    margin-top: 15%;
+}
+
+.hero-text {
+    color: #ffffff;
+    margin: .5em;
+}
+
+#profile-pic {
+    border-radius: 75px;
+    margin: 5% 2em 0 2em;
+}
+
+#copy-container {
+    color: #ffffff;
+    font-size: 18px;
+    height: 55vh;
+    overflow: scroll;
+    padding: 1em 10em 0 10em;
+    text-align: center;
+}
+
+#horizon-container {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    height: 15vh;
+    justify-content: space-around;
+}
+
+.hover-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* pulse animation for section hovers */
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 0 5px #ffffff;
+    }
+    50% {
+        box-shadow: 0 0 25px #ffffff;
+    }
+}
+
+.circle {
+    animation: pulse 2s ease-in-out infinite;
+    background-color: #e67e22;
+    border-radius: 50%;
+    box-shadow: 0 0 15px #e67e22;
+    height: 35px;
+    margin: 5px;
+    transition: all 0.2s ease-in-out;
+    width: 35px;
+}
+
+.circle:hover {
+    background-color: #e67e22;
+    box-shadow: 0 0 30px #e67e22;
+}
