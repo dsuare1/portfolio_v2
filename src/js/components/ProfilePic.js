@@ -1,21 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-import profilePic from '../../assets/profile_pic_round.png';
+import profilePic from '../../assets/profile_pic_small.png';
 
-class ProfilePic extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      id: 'profile-pic',
-      alt: 'Profile Pic',
-    };
-  }
-
-  render() {
-    return (
-      <img id={this.state.id} src={profilePic} alt={this.state.alt} />
-    );
-  }
+function ProfilePic() {
+  return (
+    <img id="profile-pic" src={profilePic} alt="Profile Pic" />
+  );
 }
 
 export default ProfilePic;

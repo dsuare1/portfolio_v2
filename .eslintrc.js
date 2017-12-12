@@ -20,10 +20,12 @@ module.exports = {
     "plugin:react/recommended",
   ],
   "rules": {
+    "arrow-body-style": 0,
     "comma-dangle": ["error", "only-multiline"],
+    "max-len": [0, 256, { "ignoreComments": true }],
     "no-console": 0,
-    "space-before-function-paren": 0,
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-    "max-len": [0, 256, { "ignoreComments": true }]
+    "react/no-array-index-key": 0,
+    "space-before-function-paren": 0,
   },
 };
