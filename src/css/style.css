@@ -32,14 +32,14 @@ body {
 }
 
 #badge-name {
-    text-shadow: 0 0 10px #01182c;
-    font-size: 32px;
+    text-shadow: 0 0 0.625em #01182c;
+    font-size: 2em;
     margin-top: 15%;
 }
 
 #badge-email {
-    text-shadow: 0 0 10px #01182c;
-    font-size: 26px;
+    text-shadow: 0 0 0.625em #01182c;
+    font-size: 1.625em;
     margin-top: 15%;
 }
 
@@ -49,21 +49,36 @@ body {
 }
 
 #profile-pic {
-    border-radius: 75px;
+    border-radius: 4.688em;
+    box-shadow: 0 0 0.938em #01182c;
     margin: 5% 2em 0 2em;
 }
 
 #copy-container {
     color: #ffffff;
-    font-size: 18px;
+    font-size: 1.125em;
     height: 55vh;
     overflow: scroll;
     padding: 1em 10em 0 10em;
     text-align: center;
 }
 
+#tech-container {
+    justify-content: space-around;
+    display: flex;
+    flex-direction: row;
+}
+
+.tech-list > li {
+    font-size:1.15em;
+    list-style-type: disc;
+    margin: 1.5em 0 1.5em 0;
+    text-align: left;
+}
+
 #horizon-container {
     align-items: center;
+    border-top: 0.075em solid #E67E22;
     display: flex;
     flex-direction: row;
     height: 15vh;
@@ -79,25 +94,25 @@ body {
 /* pulse animation for section hovers */
 @keyframes pulse {
     0%, 100% {
-        box-shadow: 0 0 5px #ffffff;
+        box-shadow: 0 0 0.313em #ffffff;
     }
     50% {
-        box-shadow: 0 0 25px #ffffff;
+        box-shadow: 0 0 1.563em #ffffff;
     }
+}
+
+.halo {
+    animation: pulse 2s ease-in-out infinite;
+    border: 0.063em solid #ffffff;
+    border-radius: 50%;
 }
 
 .circle {
-    animation: pulse 2s ease-in-out infinite;
     background-color: #e67e22;
     border-radius: 50%;
-    box-shadow: 0 0 15px #e67e22;
-    height: 35px;
-    margin: 5px;
+    box-shadow: 0 0 0.938em #e67e22;
+    height: 1.250em;
+    margin: 0.313em;
     transition: all 0.2s ease-in-out;
-    width: 35px;
-}
-
-.circle:hover {
-    background-color: #e67e22;
-    box-shadow: 0 0 30px #e67e22;
+    width: 1.250em;
 }
