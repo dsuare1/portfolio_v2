@@ -4,6 +4,7 @@ import { render } from 'react-dom';
 import Badge from './components/Badge';
 import Copy from './components/Copy';
 import Horizon from './components/Horizon';
+import Portfolio from './components/Portfolio';
 import Tech from './components/Tech';
 
 import '../css/style.css';
@@ -39,6 +40,10 @@ class App extends Component {
 
       case 'technologies':
         desiredCopy = <Tech />;
+        break;
+
+      case 'portfolio':
+        desiredCopy = <Portfolio />;
         break;
 
       default:
