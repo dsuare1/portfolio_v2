@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import { render } from 'react-dom';
 
 import Badge from './components/Badge';
-import Horizon from './components/Horizon';
 import Copy from './components/Copy';
+import Horizon from './components/Horizon';
+import Tech from './components/Tech';
 
 import '../css/style.css';
 
@@ -37,7 +38,7 @@ class App extends Component {
         break;
 
       case 'technologies':
-        desiredCopy = 'tech';
+        desiredCopy = <Tech />;
         break;
 
       default:
