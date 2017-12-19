@@ -20,7 +20,7 @@ module.exports = {
       template: path.join(paths.SRC, 'index.html'),
     }),
     new ExtractTextPlugin('style.bundle.css'),
-    new FaviconsWebpackPlugin(path.resolve(__dirname, 'src/assets/profile_favicon.ico')),
+    new FaviconsWebpackPlugin(path.resolve(__dirname, 'src/assets/img/profile_favicon.ico')),
   ],
   module: {
     rules: [
