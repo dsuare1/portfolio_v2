@@ -3,10 +3,10 @@ Derrick Suarez
 portfolio_v2
 ------
 
-* [About](##About)
-* [Installation](##Installation)
-* [Instructions](##Instructions)
-* [Technologies Used](##Technologies Used)
+* [About](#About)
+* [Installation](#Installation)
+* [Instructions](#Instructions)
+* [Technologies Used](#Technologies-used)
 
 ## About
 Author: Derrick Suarez 
