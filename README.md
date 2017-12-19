@@ -5,12 +5,12 @@
 * [Instructions](#Instructions)
 * [Technologies Used](#Technologies-used)
 
-#About
+# About
 Author: Derrick Suarez 
 
 Version 2 of my portfolio site; find the original version deployed at [derricksuarez.com](http://www.derricksuarez.com/)
 
-#Installation
+# Installation
 With the repo cloned to your local environment, run the following command in the terminal prompt:
 ```bash
 $ npm i
@@ -24,7 +24,7 @@ This will install all the dependencies listed in the project's `package.json` fi
 $ yarn install
 ```
 
-#Instructions
+# Instructions
 With the dependencies installed via `npm` or `yarn`, you can fire up the development environment by running the following command in your terminal prompt:
 ```bash
 $ npm run dev
@@ -34,7 +34,7 @@ $ npm run dev
 $ yarn run dev
 ```
 
-#Technologies used:
+# Technologies used:
 1. [Node](https://nodejs.org/en/docs/)
 2. [React](https://reactjs.org/docs/react-api.html)
 3. [Webpack](https://webpack.js.org/)
