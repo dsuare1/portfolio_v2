@@ -1,5 +1,6 @@
 # Derrick Suarez - portfolio_v2
 
+<a id="top"></a>
 * [About](#about)
 * [Installation](#installation)
 * [Instructions](#instructions)
@@ -9,6 +10,8 @@
 Author: Derrick Suarez 
 
 Version 2 of my portfolio site; find the original version deployed at [derricksuarez.com](http://www.derricksuarez.com/)
+
+[Back to top](#top)
 
 # <a id="installation"></a>Installation
 With the repo cloned to your local environment, run the following command in the terminal prompt:
@@ -24,6 +27,8 @@ This will install all the dependencies listed in the project's `package.json` fi
 $ yarn install
 ```
 
+[Back to top](#top)
+
 # <a id="instructions"></a>Instructions
 With the dependencies installed via `npm` or `yarn`, you can fire up the development environment by running the following command in your terminal prompt:
 ```bash
@@ -33,6 +38,7 @@ $ npm run dev
 ```bash
 $ yarn run dev
 ```
+[Back to top](#top)
 
 # <a id="technologies-used"></a>Technologies used:
 1. [Node](https://nodejs.org/en/docs/)
@@ -40,3 +46,5 @@ $ yarn run dev
 3. [Webpack](https://webpack.js.org/)
 4. [Babel](https://babeljs.io/)
 5. [eslint](https://eslint.org/) (with base AirBnB standards)
+
+[Back to top](#top)
