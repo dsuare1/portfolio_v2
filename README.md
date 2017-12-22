@@ -1,6 +1,6 @@
+<a id="top"></a>
 # Derrick Suarez - portfolio_v2
 
-<a id="top"></a>
 * [About](#about)
 * [Installation](#installation)
 * [Instructions](#instructions)
@@ -32,19 +32,21 @@ $ yarn install
 # <a id="instructions"></a>Instructions
 With the dependencies installed via `npm` or `yarn`, you can fire up the development environment by running the following command in your terminal prompt:
 ```bash
-$ npm run dev
+$ npm run start:dev
 ```
 *With yarn*:
 ```bash
-$ yarn run dev
+$ yarn run start:dev
 ```
+
+This will fire up a local development environment, leveraging the quick up-and-running functionality of [webpack-dev-server](https://www.npmjs.com/package/webpack-dev-server "webpack-dev-server"). Functionality will be added sometime in the future for firing up the environment in a production mode.
+
 [Back to top](#top)
 
 # <a id="technologies-used"></a>Technologies used:
-1. [Node](https://nodejs.org/en/docs/)
-2. [React](https://reactjs.org/docs/react-api.html)
-3. [Webpack](https://webpack.js.org/)
-4. [Babel](https://babeljs.io/)
-5. [eslint](https://eslint.org/) (with base AirBnB standards)
+1. [React](https://reactjs.org/docs/react-api.html)
+2. [Webpack](https://webpack.js.org/)
+3. [Babel](https://babeljs.io/)
+4. [eslint](https://eslint.org/) (with base AirBnB standards)
 
 [Back to top](#top)

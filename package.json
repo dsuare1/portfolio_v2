@@ -4,7 +4,7 @@
   "description": "Personal portfolio built using Node, React, Webpack, Babel, and Ant Design",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server",
+    "start:dev": "webpack-dev-server",
     "build": "webpack",
     "lint": "./node_modules/.bin/eslint .",
     "test": "echo \"Error: no test specified\" && exit 1"
