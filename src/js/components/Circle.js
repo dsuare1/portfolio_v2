@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class Circle extends Component {
   constructor(props) {
@@ -15,5 +16,10 @@ class Circle extends Component {
     );
   }
 }
+
+Circle.propTypes = {
+  id: PropTypes.number.isRequired,
+  onMouseOver: PropTypes.func.isRequired,
+};
 
 export default Circle;

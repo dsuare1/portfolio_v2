@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import Circle from './Circle';
 
@@ -38,5 +39,9 @@ class Horizon extends Component {
     );
   }
 }
+
+Horizon.propTypes = {
+  onMouseOver: PropTypes.func.isRequired,
+};
 
 export default Horizon;

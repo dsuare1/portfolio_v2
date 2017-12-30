@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class Copy extends Component {
   constructor(props) {
@@ -11,5 +12,9 @@ class Copy extends Component {
     );
   }
 }
+
+Copy.propTypes = {
+  value: PropTypes.number.isRequired,
+};
 
 export default Copy;

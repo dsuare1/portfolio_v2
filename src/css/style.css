@@ -38,9 +38,20 @@ body {
 }
 
 #badge-email {
-    text-shadow: 0 0 0.625em #01182c;
-    font-size: 1.625em;
     margin-top: 15%;
+}
+
+#badge-email-button {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 1em;
+    text-shadow: 0 0 0.625em #01182c;
+
+}
+
+#badge-email-button:focus {
+    outline: 0;
 }
 
 .hero-text {

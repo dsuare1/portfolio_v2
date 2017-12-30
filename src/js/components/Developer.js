@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class Developer extends Component {
   constructor(props) {
@@ -14,5 +15,9 @@ class Developer extends Component {
     );
   }
 }
+
+Developer.propTypes = {
+  value: PropTypes.string.isRequired,
+};
 
 export default Developer;
