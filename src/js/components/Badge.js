@@ -19,7 +19,7 @@ class Badge extends Component {
   }
 
   handleClick(e) {
-    console.log(e.target.innerHTML);
+    e.preventDefault();
     copyToClipboard(e.target.innerHTML);
   }
 
@@ -30,10 +30,12 @@ class Badge extends Component {
           <h1 id="badge-name">Derrick Suarez</h1>
         </div>
         <div className="badge-copy-container">
-          <ProfilePic/>
+          <ProfilePic />
         </div>
         <div className="badge-copy-container">
-          <h1 id="badge-email" onClick={e => this.handleClick(e)}>suarez.derrick@gmail.com</h1>
+          <h1 id="badge-email">
+            <button id="badge-email-button" onClick={e => this.handleClick(e)}>suarez.derrick@gmail.com</button>
+          </h1>
         </div>
       </div>
     );
