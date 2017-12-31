@@ -23,7 +23,6 @@ class App extends Component {
     this.state = {
       copy: createCopy(copy.person),
     };
-    this.handleMouseOver = this.handleMouseOver.bind(this);
   }
 
   handleMouseOver(e) {
@@ -58,7 +57,7 @@ class App extends Component {
     return (
       <div id="app">
         <Badge />
-        <Copy value={this.state.copy} />
+        <Copy copy={this.state.copy} />
         <Horizon onMouseOver={e => this.handleMouseOver(e)} />
       </div>
     );

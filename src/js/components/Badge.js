@@ -16,14 +16,56 @@ function copyToClipboard(value) {
 class Badge extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      hover: false,
+      tooltip: 'Click to copy!',
+    };
+  }
+
+  handleMouseIn() {
+    this.setState({
+      hover: true,
+    });
+  }
+
+  handleMouseOut() {
+    this.setState({
+      hover: false,
+      tooltip: 'Click to copy!',
+    });
   }
 
   handleClick(e) {
     e.preventDefault();
+
     copyToClipboard(e.target.innerHTML);
+
+    this.setState({
+      tooltip: 'Copied!',
+    });
   }
 
   render() {
+    const tooltipStyle = {
+      alignSelf: 'center',
+      backgroundColor: '#01182c',
+      borderRadius: '.25em',
+      display: this.state.hover ? 'table' : 'none',
+      fontSize: '.5em',
+      marginTop: '-10px',
+      padding: '.5em',
+    };
+
+    const upArrowStyle = {
+      alignSelf: 'center',
+      backgroundColor: '#01182c',
+      display: this.state.hover ? 'table' : 'none',
+      height: '20px',
+      marginTop: '5px',
+      transform: 'rotate(45deg)',
+      width: '20px',
+    };
+
     return (
       <div className="badge-container">
         <div className="badge-copy-container">
@@ -34,7 +76,9 @@ class Badge extends Component {
         </div>
         <div className="badge-copy-container">
           <h1 id="badge-email">
-            <button id="badge-email-button" onClick={e => this.handleClick(e)}>suarez.derrick@gmail.com</button>
+            <button id="badge-email-button" onMouseOver={() => { this.handleMouseIn(); }} onMouseOut={() => { this.handleMouseOut(); }} onClick={(e) => { this.handleClick(e); }}>suarez.derrick@gmail.com</button>
+            <div style={upArrowStyle} />
+            <span style={tooltipStyle}>{this.state.tooltip}</span>
           </h1>
         </div>
       </div>
