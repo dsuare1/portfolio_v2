@@ -18,7 +18,7 @@ class Circle extends Component {
 }
 
 Circle.propTypes = {
-  id: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
   onMouseOver: PropTypes.func.isRequired,
 };
 

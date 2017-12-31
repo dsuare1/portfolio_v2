@@ -8,13 +8,13 @@ class Copy extends Component {
 
   render() {
     return (
-      <div id="copy-container">{this.props.value}</div>
+      <div id="copy-container">{this.props.copy}</div>
     );
   }
 }
 
 Copy.propTypes = {
-  value: PropTypes.number.isRequired,
+  copy: PropTypes.any.isRequired,
 };
 
 export default Copy;

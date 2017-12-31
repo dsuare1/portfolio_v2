@@ -25,6 +25,7 @@ module.exports = {
     "class-methods-use-this": 0,
     "max-len": [0, 256, { "ignoreComments": true }],
     "no-console": 0,
+    "react/forbid-prop-types": 0,
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "react/no-array-index-key": 0,
     "space-before-function-paren": 0,
