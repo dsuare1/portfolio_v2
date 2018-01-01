@@ -36,11 +36,10 @@ class Badge extends Component {
   }
 
   handleClick(e) {
-    e.preventDefault();
-
     copyToClipboard(e.target.innerHTML);
 
     this.setState({
+      hover: true,
       tooltip: 'Copied!',
     });
   }
@@ -76,7 +75,7 @@ class Badge extends Component {
         </div>
         <div className="badge-copy-container">
           <h1 id="badge-email">
-            <button id="badge-email-button" onMouseOver={() => { this.handleMouseIn(); }} onMouseOut={() => { this.handleMouseOut(); }} onClick={(e) => { this.handleClick(e); }}>suarez.derrick@gmail.com</button>
+            <button id="badge-email-button" onMouseOver={() => { this.handleMouseIn(); }} onFocus={() => { this.handleMouseIn(); }} onMouseOut={() => { this.handleMouseOut(); }} onBlur={() => { this.handleMouseOut(); }} onClick={(e) => { this.handleClick(e); }}>suarez.derrick@gmail.com</button>
             <div style={upArrowStyle} />
             <span style={tooltipStyle}>{this.state.tooltip}</span>
           </h1>
