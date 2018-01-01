@@ -125,25 +125,21 @@ body {
 /* pulse animation for section hovers */
 @keyframes pulse {
     0%, 100% {
-        box-shadow: 0 0 0.313em #ffffff;
+        box-shadow: 0 0 0.313em #e67e22;
     }
     50% {
-        box-shadow: 0 0 1.563em #ffffff;
+        box-shadow: 0 0 1.563em #e67e22;
     }
-}
-
-.halo {
-    animation: pulse 2s ease-in-out infinite;
-    border: 0.063em solid #ffffff;
-    border-radius: 50%;
 }
 
 .circle {
+    animation: pulse 2s ease-in-out infinite;
     background-color: #e67e22;
+    border: none;
     border-radius: 50%;
     box-shadow: 0 0 0.938em #e67e22;
-    height: 1.250em;
+    height: 2.5em;
     margin: 0.313em;
     transition: all 0.2s ease-in-out;
-    width: 1.250em;
+    width: 2.5em;
 }

@@ -58,7 +58,7 @@ class App extends Component {
       <div id="app">
         <Badge />
         <Copy copy={this.state.copy} />
-        <Horizon onMouseOver={e => this.handleMouseOver(e)} />
+        <Horizon onMouseOver={e => this.handleMouseOver(e)} onFocus={e => this.handleMouseOver(e)} />
       </div>
     );
   }

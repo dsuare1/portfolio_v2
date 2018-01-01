@@ -8,10 +8,11 @@ class Circle extends Component {
 
   render() {
     return (
-      <div
-        id={this.props.id}
+      <button
         className="circle"
-        onMouseOver={e => this.props.onMouseOver(e)}
+        id={this.props.id}
+        onMouseOver={(e) => { this.props.onMouseOver(e); }}
+        onFocus={(e) => { this.props.onMouseOver(e); }}
       />
     );
   }
