@@ -1,28 +1,58 @@
 import React from 'react';
+import ReactTooltip from 'react-tooltip';
 
 function Tech() {
   return (
     <div id="tech-container">
-      <div id="tech-list-left">
-        <ol className="tech-list">
-          <li>Node</li>
-          <li>Express</li>
-          <li>Postgres</li>
-          <li>Sequelize ORM</li>
-          <li>Mocha</li>
-          <li>Should</li>
-        </ol>
-      </div>
-      <div id="tech-list-right">
-        <ol className="tech-list">
-          <li>HTML5</li>
-          <li>CSS3</li>
-          <li>jQuery</li>
-          <li>Git</li>
-          <li>React</li>
-          <li>MongoDB</li>
-        </ol>
-      </div>
+      <a href="https://nodejs.org/en/docs/" target="_blank" rel="noopener noreferrer" data-tip="NodeJS Docs">
+        <i className="devicon-nodejs-plain colored tech-logo" />
+        <ReactTooltip effect="solid" />
+      </a>
+
+      <a href="https://www.postgresql.org/docs/" target="_blank" rel="noopener noreferrer" data-tip="PostgreSQL Docs">
+        <i className="devicon-postgresql-plain colored tech-logo" />
+        <ReactTooltip effect="solid" />
+      </a>
+
+      <a href="http://docs.sequelizejs.com/" target="_blank" rel="noopener noreferrer" data-tip="Sequelize Docs">
+        <i className="devicon-sequelize-plain colored tech-logo" />
+        <ReactTooltip effect="solid" />
+      </a>
+
+      <a href="https://mochajs.org/" target="_blank" rel="noopener noreferrer" data-tip="Mocha Docs">
+        <i className="devicon-mocha-plain colored tech-logo" />
+        <ReactTooltip effect="solid" />
+      </a>
+
+      <a href="https://git-scm.com/" target="_blank" rel="noopener noreferrer" data-tip="Git Docs">
+        <i className="devicon-git-plain colored tech-logo" />
+        <ReactTooltip effect="solid" />
+      </a>
+
+      <a href="https://reactjs.org/docs/hello-world.html" target="_blank" rel="noopener noreferrer" data-tip="React Docs">
+        <i className="devicon-react-plain colored tech-logo" />
+        <ReactTooltip effect="solid" />
+      </a>
+
+      <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5" target="_blank" rel="noopener noreferrer" data-tip="HTML5 Docs">
+        <i className="devicon-html5-plain colored tech-logo" />
+        <ReactTooltip effect="solid" />
+      </a>
+
+      <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3" target="_blank" rel="noopener noreferrer" data-tip="CSS3 Docs">
+        <i className="devicon-css3-plain colored tech-logo" />
+        <ReactTooltip effect="solid" />
+      </a>
+
+      <a href="http://api.jquery.com/" target="_blank" rel="noopener noreferrer" data-tip="jQuery Docs">
+        <i className="devicon-jquery-plain colored tech-logo" />
+        <ReactTooltip effect="solid" />
+      </a>
+
+      <a href="https://docs.mongodb.com/" target="_blank" rel="noopener noreferrer" data-tip="MongoDB Docs">
+        <i className="devicon-mongodb-plain colored tech-logo" />
+        <ReactTooltip effect="solid" />
+      </a>
     </div>
   );
 }
