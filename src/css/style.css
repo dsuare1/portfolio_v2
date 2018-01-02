@@ -36,19 +36,18 @@ a {
     align-items: center;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     width: 33%;
 }
 
 #badge-name {
     text-shadow: 0 0 0.625em #01182c;
     font-size: 2em;
-    margin-top: 15%;
 }
 
 #badge-email {
     display: flex;
     flex-direction: column;
-    margin-top: 15%;
 }
 
 #badge-email-button {
@@ -75,7 +74,26 @@ a {
 #profile-pic {
     border-radius: 4.688em;
     box-shadow: 0 0 0.938em #01182c;
-    margin: 5% 2em 0 2em;
+    z-index: 2;
+}
+
+#profile-pic-anchor {
+    z-index: 2;
+}
+
+#profile-pic:hover {
+    cursor: pointer;
+}
+
+#profile-pic-anchor:hover ~ #resume-icon {
+    margin-left: 5em;
+}
+
+#resume-icon {
+    /*margin-top: 2.75em;*/
+    position: absolute;
+    transition: margin-left 0.3s ease;
+    z-index: 1;
 }
 
 #copy-container {

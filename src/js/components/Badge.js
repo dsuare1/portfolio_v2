@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
+import ReactTooltip from 'react-tooltip';
 
-import ProfilePic from './ProfilePic';
+import profilePic from '../../assets/img/profile_pic_small.png';
+import resumeIcon from '../../assets/img/resume_icon_white.png';
+import resume from '../../assets/files/derrick_kyle_suarez_resume_pdf.pdf';
 
 function copyToClipboard(value) {
   const p = document.createElement('textarea');
@@ -51,8 +54,9 @@ class Badge extends Component {
       borderRadius: '.25em',
       display: this.state.hover ? 'table' : 'none',
       fontSize: '.5em',
-      marginTop: '-10px',
+      marginTop: '3em',
       padding: '.5em',
+      position: 'fixed',
     };
 
     const upArrowStyle = {
@@ -60,7 +64,8 @@ class Badge extends Component {
       backgroundColor: '#01182c',
       display: this.state.hover ? 'table' : 'none',
       height: '20px',
-      marginTop: '5px',
+      marginTop: '1.25em',
+      position: 'fixed',
       transform: 'rotate(45deg)',
       width: '20px',
     };
@@ -71,7 +76,11 @@ class Badge extends Component {
           <h1 id="badge-name">Derrick Suarez</h1>
         </div>
         <div className="badge-copy-container">
-          <ProfilePic />
+          <a href={resume} id="profile-pic-anchor" data-tip="Click for CV" target="_blank">
+            <img id="profile-pic" src={profilePic} alt="Profile Pic" />
+          </a>
+          <ReactTooltip effect="solid" place="left" />
+          <img id="resume-icon" src={resumeIcon} alt="Resume" />
         </div>
         <div className="badge-copy-container">
           <h1 id="badge-email">
