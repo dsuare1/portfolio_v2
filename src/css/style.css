@@ -1,5 +1,4 @@
 body {
-    /*background: #0D47A1;*/
     background: #01182c;
     color: #ffffff;
     font-family: 'Quicksand', Arial, sans-serif;
@@ -78,22 +77,11 @@ a {
 }
 
 #profile-pic-anchor {
-    z-index: 2;
+    z-index: 3;
 }
 
 #profile-pic:hover {
     cursor: pointer;
-}
-
-#profile-pic-anchor:hover ~ #resume-icon {
-    margin-left: 5em;
-}
-
-#resume-icon {
-    /*margin-top: 2.75em;*/
-    position: absolute;
-    transition: margin-left 0.3s ease;
-    z-index: 1;
 }
 
 #copy-container {
