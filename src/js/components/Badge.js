@@ -20,54 +20,103 @@ class Badge extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      hover: false,
-      tooltip: 'Click to copy!',
+      emailHover: false,
+      profilePicHover: false,
+      tooltip: 'Click to copy',
     };
   }
 
-  handleMouseIn() {
-    this.setState({
-      hover: true,
-    });
+  handleMouseIn(e) {
+    console.log(e.target.id);
+    if (e.target.id === 'badge-email-button') {
+      this.setState({
+        emailHover: true,
+      });
+    }
+
+    if (e.target.id === 'profile-pic' || e.target.id === 'profile-pic-anchor') {
+      this.setState({
+        profilePicHover: true,
+      });
+    }
   }
 
-  handleMouseOut() {
-    this.setState({
-      hover: false,
-      tooltip: 'Click to copy!',
-    });
+  handleMouseOut(e) {
+    if (e.target.id === 'badge-email-button') {
+      this.setState({
+        emailHover: false,
+        tooltip: 'Click to copy',
+      });
+    }
+
+    if (e.target.id === 'profile-pic' || e.target.id === 'profile-pic-anchor') {
+      this.setState({
+        profilePicHover: false,
+      });
+    }
   }
 
   handleClick(e) {
     copyToClipboard(e.target.innerHTML);
 
-    this.setState({
-      hover: true,
-      tooltip: 'Copied!',
-    });
+    if (e.target.id === 'badge-email-button') {
+      this.setState({
+        emailHover: true,
+        tooltip: 'Copied!',
+      });
+    }
   }
 
   render() {
-    const tooltipStyle = {
+    const emailTooltipStyle = {
       alignSelf: 'center',
       backgroundColor: '#01182c',
       borderRadius: '.25em',
-      display: this.state.hover ? 'table' : 'none',
+      display: this.state.emailHover ? 'table' : 'none',
       fontSize: '.5em',
       marginTop: '3em',
       padding: '.5em',
       position: 'fixed',
     };
 
-    const upArrowStyle = {
+    const emailArrowStyle = {
       alignSelf: 'center',
       backgroundColor: '#01182c',
-      display: this.state.hover ? 'table' : 'none',
+      display: this.state.emailHover ? 'table' : 'none',
       height: '20px',
       marginTop: '1.25em',
       position: 'fixed',
       transform: 'rotate(45deg)',
       width: '20px',
+    };
+
+    const resumeIconStyle = {
+      marginLeft: this.state.profilePicHover ? '5em' : '0em',
+      position: 'absolute',
+      transition: 'margin-left 0.2s ease',
+      zIndex: '1',
+    };
+
+    const profilePicTooltipStyle = {
+      alignSelf: 'left',
+      backgroundColor: '#01182c',
+      borderRadius: '.25em',
+      display: this.state.profilePicHover ? 'table' : 'none',
+      fontSize: '1em',
+      marginLeft: '2.5em',
+      padding: '.5em',
+      position: 'fixed',
+    };
+
+    const profilePicArrowStyle = {
+      alignSelf: 'left',
+      backgroundColor: '#01182c',
+      display: this.state.profilePicHover ? 'table' : 'none',
+      height: '25px',
+      marginLeft: '8em',
+      position: 'fixed',
+      transform: 'rotate(45deg)',
+      width: '25px',
     };
 
     return (
@@ -76,17 +125,18 @@ class Badge extends Component {
           <h1 id="badge-name">Derrick Suarez</h1>
         </div>
         <div className="badge-copy-container">
-          <a href={resume} id="profile-pic-anchor" data-tip="Click for CV" target="_blank">
+          <a href={resume} id="profile-pic-anchor" target="_blank" onMouseOver={(e) => { this.handleMouseIn(e); }} onFocus={(e) => { this.handleMouseIn(e); }} onMouseOut={(e) => { this.handleMouseOut(e); }} onBlur={(e) => { this.handleMouseOut(e); }}>
             <img id="profile-pic" src={profilePic} alt="Profile Pic" />
           </a>
-          <ReactTooltip effect="solid" place="left" />
-          <img id="resume-icon" src={resumeIcon} alt="Resume" />
+          <img id="resume-icon" src={resumeIcon} alt="Resume" style={resumeIconStyle} />
+          <div style={profilePicArrowStyle} />
+          <span style={profilePicTooltipStyle}>Click for CV</span>
         </div>
         <div className="badge-copy-container">
           <h1 id="badge-email">
-            <button id="badge-email-button" onMouseOver={() => { this.handleMouseIn(); }} onFocus={() => { this.handleMouseIn(); }} onMouseOut={() => { this.handleMouseOut(); }} onBlur={() => { this.handleMouseOut(); }} onClick={(e) => { this.handleClick(e); }}>suarez.derrick@gmail.com</button>
-            <div style={upArrowStyle} />
-            <span style={tooltipStyle}>{this.state.tooltip}</span>
+            <button id="badge-email-button" onMouseOver={(e) => { this.handleMouseIn(e); }} onFocus={(e) => { this.handleMouseIn(e); }} onMouseOut={(e) => { this.handleMouseOut(e); }} onBlur={(e) => { this.handleMouseOut(e); }} onClick={(e) => { this.handleClick(e); }}>suarez.derrick@gmail.com</button>
+            <div style={emailArrowStyle} />
+            <span style={emailTooltipStyle}>{this.state.tooltip}</span>
           </h1>
         </div>
       </div>
