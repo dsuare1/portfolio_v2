@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { render } from 'react-dom';
 
 import Badge from './components/Badge';
-import Copy from './components/Copy';
 import Horizon from './components/Horizon';
 import Portfolio from './components/Portfolio';
 import Tech from './components/Tech';
@@ -21,43 +20,104 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      copy: createCopy(copy.person),
+      personHover: true,
+      developerHover: false,
+      techHover: false,
+      portfolioHover: false,
     };
   }
 
   handleMouseOver(e) {
-    let desiredCopy;
-
     switch (e.target.id) {
       case 'person':
-        desiredCopy = createCopy(copy.person);
+        this.setState({
+          personHover: true,
+          developerHover: false,
+          techHover: false,
+          portfolioHover: false,
+        });
         break;
 
       case 'developer':
-        desiredCopy = createCopy(copy.developer);
+        this.setState({
+          personHover: false,
+          developerHover: true,
+          techHover: false,
+          portfolioHover: false,
+        });
         break;
 
       case 'technologies':
-        desiredCopy = <Tech />;
+        this.setState({
+          personHover: false,
+          developerHover: false,
+          techHover: true,
+          portfolioHover: false,
+        });
         break;
 
       case 'portfolio':
-        desiredCopy = <Portfolio />;
+        this.setState({
+          personHover: false,
+          developerHover: false,
+          techHover: false,
+          portfolioHover: true,
+        });
         break;
 
       default:
         // Do nothing
     }
-    this.setState({
-      copy: desiredCopy,
-    });
   }
 
   render() {
+    const personContainerStyle = {
+      color: '#ffffff',
+      display: this.state.personHover ? 'block' : 'none',
+      fontSize: '1.125em',
+      height: '55vh',
+      overflow: 'scroll',
+      textAlign: 'center',
+    };
+
+    const developerContainerStyle = {
+      color: '#ffffff',
+      display: this.state.developerHover ? 'block' : 'none',
+      fontSize: '1.125em',
+      height: '55vh',
+      overflow: 'scroll',
+      textAlign: 'center',
+    };
+
+    const techContainerStyle = {
+      alignItems: 'center',
+      display: this.state.techHover ? 'flex' : 'none',
+      flexDirection: 'row',
+      flexWrap: 'wrap',
+      height: '100%',
+      justifyContent: 'center',
+      transition: 'display 0.35s ease',
+    };
+
+    const portfolioContainerStyle = {
+      display: this.state.portfolioHover ? 'flex' : 'none',
+      flexDirection: 'row',
+      flexWrap: 'wrap',
+      height: '100%',
+      justifyContent: 'space-around',
+      paddingBottom: '1em',
+      transition: 'display 0.35s ease',
+    };
+
     return (
       <div id="app">
         <Badge />
-        <Copy copy={this.state.copy} />
+        <div id="copy-container">
+          <div id="person-copy-container" style={personContainerStyle}>{createCopy(copy.person)}</div>
+          <div id="developer-copy-container" style={developerContainerStyle}>{createCopy(copy.developer)}</div>
+          <Tech style={techContainerStyle} />
+          <Portfolio style={portfolioContainerStyle} />
+        </div>
         <Horizon onMouseOver={e => this.handleMouseOver(e)} onFocus={e => this.handleMouseOver(e)} />
       </div>
     );

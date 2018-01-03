@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReactTooltip from 'react-tooltip';
 
 import profilePic from '../../assets/img/profile_pic_small.png';
 import resumeIcon from '../../assets/img/resume_icon_white.png';
@@ -93,30 +92,8 @@ class Badge extends Component {
     const resumeIconStyle = {
       marginLeft: this.state.profilePicHover ? '5em' : '0em',
       position: 'absolute',
-      transition: 'margin-left 0.2s ease',
+      transition: 'margin-left 0.35s ease',
       zIndex: '1',
-    };
-
-    const profilePicTooltipStyle = {
-      alignSelf: 'left',
-      backgroundColor: '#01182c',
-      borderRadius: '.25em',
-      display: this.state.profilePicHover ? 'table' : 'none',
-      fontSize: '1em',
-      marginLeft: '2.5em',
-      padding: '.5em',
-      position: 'fixed',
-    };
-
-    const profilePicArrowStyle = {
-      alignSelf: 'left',
-      backgroundColor: '#01182c',
-      display: this.state.profilePicHover ? 'table' : 'none',
-      height: '25px',
-      marginLeft: '8em',
-      position: 'fixed',
-      transform: 'rotate(45deg)',
-      width: '25px',
     };
 
     return (
@@ -129,8 +106,6 @@ class Badge extends Component {
             <img id="profile-pic" src={profilePic} alt="Profile Pic" />
           </a>
           <img id="resume-icon" src={resumeIcon} alt="Resume" style={resumeIconStyle} />
-          <div style={profilePicArrowStyle} />
-          <span style={profilePicTooltipStyle}>Click for CV</span>
         </div>
         <div className="badge-copy-container">
           <h1 id="badge-email">
