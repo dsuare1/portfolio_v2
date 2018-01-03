@@ -28,6 +28,7 @@ module.exports = {
     "react/forbid-prop-types": 0,
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "react/no-array-index-key": 0,
+    "react/prefer-stateless-function": 0,
     "space-before-function-paren": 0,
   },
 };

@@ -105,26 +105,8 @@ a {
     transition: all 0.2s ease;
 }
 
-#portfolio-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    height: 100%;
-    justify-content: center;
-    padding-bottom: 1em;
-}
-
 .portfolio-item {
     padding: 25px;
-}
-
-#tech-container {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    height: 100%;
-    justify-content: center;
 }
 
 .tech-logo {

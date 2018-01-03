@@ -4,10 +4,6 @@ import PropTypes from 'prop-types';
 import Circle from './Circle';
 
 class Horizon extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <div id="horizon-container">
