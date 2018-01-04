@@ -97,7 +97,7 @@ class Badge extends Component {
     };
 
     return (
-      <div className="badge-container">
+      <div id="badge-container">
         <div className="badge-copy-container">
           <h1 id="badge-name">Derrick Suarez</h1>
         </div>

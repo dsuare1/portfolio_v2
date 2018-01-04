@@ -7,6 +7,10 @@ import Portfolio from './components/Portfolio';
 import Tech from './components/Tech';
 
 import '../css/style.css';
+import '../css/media-queries/mq-badge.css';
+import '../css/media-queries/mq-copy.css';
+import '../css/media-queries/mq-tech.css';
+import '../css/media-queries/mq-horizon.css';
 
 import copy from '../assets/copy.json';
 
@@ -96,7 +100,6 @@ class App extends Component {
       flexWrap: 'wrap',
       height: '100%',
       justifyContent: 'center',
-      transition: 'display 0.35s ease',
     };
 
     const portfolioContainerStyle = {
@@ -106,7 +109,6 @@ class App extends Component {
       height: '100%',
       justifyContent: 'space-around',
       paddingBottom: '1em',
-      transition: 'display 0.35s ease',
     };
 
     return (
